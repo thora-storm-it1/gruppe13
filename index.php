@@ -16,11 +16,9 @@
 		<div class="top">
 			<div class="tittel"> Yeet </div>
 			<div class="navigering">
-				<a href="#" class="aktiv"> Hjem </a>
-				<a href="#"> Lenke 1 </a>
-				<a href="#"> Lenke 2 </a>
-				<a href="#"> Lenke 3 </a>
-				<a href="#"> Lenke 4 </a>
+				<?php
+					include "meny.php";
+				?>
 			</div>
 		</div>
 
