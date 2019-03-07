@@ -9,18 +9,28 @@
 
 <body>
 
-	<div class="navigasjon">
-		<div class="navigasjon1"> </div>
+<div class="navigasjon">
+	<div class="navigasjon1"> </div>
 
-		<div class="navigasjon2">
-			
-			 </div>
-
+	<div class="navigasjon2">
+		<div class="top">
+			<div class="tittel"> Yeet </div>
+			<div class="navigering">
+				<a href="#" class="aktiv"> Hjem </a>
+				<a href="#"> Lenke 1 </a>
+				<a href="#"> Lenke 2 </a>
+				<a href="#"> Lenke 3 </a>
+				<a href="#"> Lenke 4 </a>
+			</div>
 		</div>
 
+		<div class="innhold">
+		</div>
+	</div>
 
 
-	</body>
+
+</body>
 
 
 
