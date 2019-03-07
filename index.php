@@ -4,7 +4,7 @@
 	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="stilark/stilark.css">
-	</head>
+</head>
 
 
 <body>
