@@ -1,20 +1,14 @@
-	<div class="tittel"> Yeet </div>
-		<div class="navigering">
-			<?php
-
-			?>
-			<div class="dropdown">
-				<button class="dropdownknapp"> <a href="#"> Knapp 1 </a> </button>
-				<div class="dropdowninnhold">
-					<a href="#"> Lenke 1 </a>
-					<a href="#"> Lenke 2 </a>
-					<a href="#"> Lenke 3 </a>
-					<a href="#"> Lenke 4 </a>
-				</div>
+<div class="dropdown">
+	<button class="dropdownknapp"> <a href="#"> Knapp 1 </a> </button>
+	<div class="dropdowninnhold">
+		<a href="#"> Lenke 1 </a>
+		<a href="#"> Lenke 2 </a>
+		<a href="#"> Lenke 3 </a>
+		<a href="#"> Lenke 4 </a>
+	</div>
 
 
-			</div>
-		</div>
+</div>
 
 
 <style>
