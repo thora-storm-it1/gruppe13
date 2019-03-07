@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Koble til database fra PHP </title>
+	<title> Vareoversikt </title>
 </head>
 
 <body style="font-family:Verdana;">
@@ -10,55 +10,63 @@
 $tjener = "localhost";
 $brukernavn = "root";
 $passord = "";
-$database = "tegneserie";
+$database = "prosjekt2019";
 
 $kobling = new mysqli($tjener, $brukernavn, $passord, $database);
 
 
 if ($kobling->connect_error) {
 	die("Noe gikk galt: " . $kobling->connect_error);
-} else {
-	echo "Koblingen virker.";
 }
 
 $kobling->set_charset("utf8");
 
 ?>
 
-<h1> Blader </h1>
+<h1> Alle Varer </h1>
 
 <?php
-	$sql = "SELECT * FROM kategori JOIN subkategori ON kategori.kategori_id=subkategori.kategori_id JOIN vare ON vare.subkategori_id=subkategori.subkategori_id ORDER BY kategori_id";
+	$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id ORDER BY kategori.kategori_id, varenavn";
+
 	$resultat = $kobling->query($sql);
 
-	echo "<table> <tr>
+	echo "<table>
+			<tr>
 				<td>Kategori</td>
-				<td>Subkategori</td> 
 				<td>Vare</td> 
-				<td>Rating</td>  
-			  </tr>";
+				<td>Pris</td>
+				<td>Rating</td>
+				<td class='varebilde'> </td>
+			</tr>";
 
 	while($rad = $resultat->fetch_assoc()){
 		$kategorinavn = $rad["kategorinavn"];
-		$subkategorinavn = $rad["subkategorinavn"];
 		$varenavn = $rad["varenavn"];
 		$rating = $rad["rating"];
+		$vare_id = $rad["vare_id"];
+		$pris = $rad["pris"];
+		$bildeurl = $rad["bildeurl"];
 
 
-		echo "<tr>
+
+		echo "
+			<tr>
 				<td>$kategorinavn</td>
-				<td> $subkategorinavn </td> 
-				<td>$<a href='vare.php?vare_id=$vare_id'> $varenavn </a></td> 
-				<td>$rating</td>  
-			  </tr>";
+				<td><a href='vare.php?vare_id=$vare_id'> $varenavn </a></td> 
+				<td>$pris$ </td>
+				<td>$rating</td>
+			</tr>"; 
 	}
 
 	echo "</table>";
 
-		
-
-
 ?>
+
+
+
+
+
+
 
 </body>
 
@@ -66,6 +74,7 @@ $kobling->set_charset("utf8");
 <style>
 	table{border-collapse:collapse;}
 	td {border:1px solid}
+	
 </style>
 
 </html>
