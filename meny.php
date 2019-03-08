@@ -14,19 +14,19 @@
 		<div class="navigering">
 
 			<div>
-				<button class="dropdownknapp"> <a href='oversikt.php'> All wares </a> </button>
+				<div class="dropdownknapp"> <a href='oversikt.php'> All wares </a> </div>
 			</div>
 
 			<div>
-				<button class="dropdownknapp"> <a href="#"> Arms </a> </button>
+				<div class="dropdownknapp"> <a href="#"> Arms </a> </div>
 			</div>
 
 			<div>
-				<button class="dropdownknapp"> <a href="#"> Armor </a> </button>
+				<div class="dropdownknapp"> <a href="#"> Armor </a> </div>
 			</div>
 
 			<div class="dropdown">
-				<button class="dropdownknapp"> <a href="#"> Others </a> </button>
+				<div class="dropdownknapp"> <a href="#"> Others </a> </div>
 				<div class="dropdowninnhold">
 					<a href="#"> Lenke 1 </a>
 					<a href="#"> Lenke 2 </a>
