@@ -3,30 +3,18 @@
 <head>
 	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stilark/stilark.css">
 </head>
 
 
 <body>
 
-<div class="navigasjon">
-	<div class="navigasjon1"> </div>
 
-	<div class="navigasjon2">
-		<div class="top">
-			<div class="tittel"> Yeet </div>
-			<div class="navigering">
-				<?php
-					include "meny.php";
-				?>
-			</div>
-		</div>
+	<?php
+		include "meny.php";
+	?>
 
-		<div class="innhold">
-		</div>
+	<div class="innhold">
 	</div>
-
-
 
 </body>
 
