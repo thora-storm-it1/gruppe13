@@ -1,64 +1,82 @@
 <html>
-
 <head>
-	<title> Prosjekt 2019 </title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stilark/stilark.css">
+	<title> Vareoversikt </title>
 </head>
 
+<body style="font-family:Verdana;">
 
-<body>
+<?php
 
-<div class="navigasjon">
-	<div class="navigasjon1"> </div>
+include "meny.php"
 
-	<div class="navigasjon2">
-		<div class="top">
-			<div class="tittel"> Yeet </div>
-			<div class="navigering">
-				<?php
-					include "meny.php";
-				?>
-			</div>
-		</div>
+$tjener = "localhost";
+$brukernavn = "root";
+$passord = "";
+$database = "prosjekt2019";
 
-		<div class="innhold">
-		</div>
-	</div>
+$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
+
+
+if ($kobling->connect_error) {
+	die("Noe gikk galt: " . $kobling->connect_error);
+}
+
+$kobling->set_charset("utf8");
+
+?>
+
+<h1> Alle Varer </h1>
+
+<?php
+	$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id ORDER BY kategori.kategori_id, varenavn";
+
+	$resultat = $kobling->query($sql);
+
+	echo "<table>
+			<tr>
+				<td>Kategori</td>
+				<td>Vare</td> 
+				<td>Pris</td>
+				<td>Rating</td>
+				<td class='varebilde'> </td>
+			</tr>";
+
+	while($rad = $resultat->fetch_assoc()){
+		$kategorinavn = $rad["kategorinavn"];
+		$varenavn = $rad["varenavn"];
+		$rating = $rad["rating"];
+		$vare_id = $rad["vare_id"];
+		$pris = $rad["pris"];
+		$bildeurl = $rad["bildeurl"];
+
+
+
+		echo "
+			<tr>
+				<td>$kategorinavn</td>
+				<td><a href='vare.php?vare_id=$vare_id'> $varenavn </a></td> 
+				<td>$pris$ </td>
+				<td>$rating</td>
+			</tr>"; 
+	}
+
+	echo "</table>";
+
+?>
+
+
+
+
 
 
 
 </body>
 
 
-
 <style>
-	body{
-		font-family:Century Gothic;
-		margin:0;
-	}
-
-	.navigasjon{
-		display:flex;
-		flex-flow:row wrap;
-		position:fixed;
-		height:30%;
-		width:100%;
-	}
-
-	.navigasjon1{
-		width:100%;
-		background-color:#2D3AB4;
-	}
-
-	.navigasjon2{
-		width:100%;
-		background-color:#F51717;
-	}
-
-
+	table{border-collapse:collapse;}
+	td {border:1px solid}
+	
 </style>
-
-
 
 </html>
