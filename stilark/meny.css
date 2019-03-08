@@ -34,14 +34,14 @@ body {
 	margin-right: 50px;
 }
 
-.dropdownknapp{
+.lenke {
 	background-color: #e2df0f;
 	margin: 10px;
 	padding: 0;
 	border-radius: 8px;
 }
 
-.dropdownknapp a{  
+.lenke a{  
 	color: #b0b0b0;
 	text-decoration: none; 
 	color:black; 
@@ -58,7 +58,7 @@ body {
 
 
 
-.dropdownknapp a:hover{
+.lenke a:hover{
 	color: white;
 	transition: all .2s ease-in-out;
 
@@ -80,6 +80,7 @@ body {
 	width:150px;
 	margin-left:20px;
 	background-color:#F0F006;
+	border-radius: 5px;
 	}
 
 .dropdown:hover .dropdowninnhold{
