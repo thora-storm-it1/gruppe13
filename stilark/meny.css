@@ -20,64 +20,45 @@ body {
 	text-align: center;
 	font-size: 2vw;
 	font-weight: bold;
-	line-height: 80px;
+	line-height: 2.8;
 	align-items: center;
-	flex-grow: 1;
+	flex-grow: 2;
 }
 
 .top .navigering {
-	width: 75%;
-	text-align: center;
 	display: flex;
-	justify-content: center;
+	float: right;
 	font-size: 1.3vw;
 	font-family: Century Gothic;
-	padding-right: 20px;
+	margin-top: 10px;
+	margin-right: 50px;
 }
 
-.top .navigering a {
-	text-decoration: none;
-	font-weight: bold;
+.dropdownknapp{
+	background-color: yellow;
+	margin: 10px;
+	padding: 0;
 	border-radius: 8px;
-	flex-grow: 1;
+}
+
+.dropdownknapp a{  
 	color: #b0b0b0;
-	margin: 15px;
-	line-height: 50px;
-}
-
-.top .navigering a:hover {
-	color: white;
-	transition: all .2s ease-in-out;
-}
-
-.top .navigering .aktiv {
-	background-color: #e2df0f;
-	color: #111111;
-}
-
-.top .navigering .aktiv:hover{
-	color: #ffffff;
-	background-color: grey;
-}
-
-.top .navigering .dropdown{ 
-	display: inline-block; 
-	position: relative;
-	}
-
-.dropdownknapp{ 
-	background-color: yellow; 
-	padding: 20px; text-decoration: none; 
+	text-decoration: none; 
 	color:black; 
 	font-size: 17px; 
-	margin-left:20px;
 	border: none;
-	width:150px;
-	}
+	text-decoration: none;	e;
+	font-weight: bold;
+	line-height: 50px;
+	display: flex;
+	min-width: 150px;
+	flex-grow: 1;
+	justify-content: center;
+}
 
 
 
-.dropdownknapp:hover a{
+.dropdownknapp a:hover{
 	color: white;
 	transition: all .2s ease-in-out;
 
