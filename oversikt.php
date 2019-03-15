@@ -6,21 +6,7 @@
 <body style="font-family:Verdana;">
 
 <?php
-
-$tjener = "localhost";
-$brukernavn = "root";
-$passord = "";
-$database = "prosjekt2019";
-
-$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
-
-
-if ($kobling->connect_error) {
-	die("Noe gikk galt: " . $kobling->connect_error);
-}
-
-$kobling->set_charset("utf8");
-
+	include "kobling.php";
 ?>
 
 <h1> Alle Varer </h1>
