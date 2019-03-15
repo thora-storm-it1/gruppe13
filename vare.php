@@ -22,19 +22,7 @@
 			die("Du må velge en vare.");
 		}
 		
-		$tjener = "localhost";
-		$brukernavn = "root";
-		$passord = "";
-		$database = "prosjekt2019";
-
-		$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
-
-
-		if ($kobling->connect_error) {
-			die("Noe gikk galt: " . $kobling->connect_error);
-		}
-
-		$kobling->set_charset("utf8");
+		include "kobling.php";
 
 
 		$sql="SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id WHERE vare_id=$vare_id";
@@ -51,12 +39,26 @@
 
 
 				echo "
-						<h1> $varenavn </h1> <br>
-						<img src='$bildeurl' width=150px>
-						<p> $beskrivelse <p>
-						The $varenavn goes for $$pris <br>
-						We have given the $varenavn a rating of $rating/10
-						";
+					<div class='innpakning'>
+						<div class='varenavn'>
+							<h1> $varenavn </h1>
+						</div>
+						<div class='bilde'>
+							<img src='$bildeurl' width=150px>
+						</div>
+						<div class='pris'>
+							The $varenavn currently goes for $$pris
+						</div>
+						<div class='rating'>
+							We have given the $varenavn a rating of $rating/10
+						</div>
+						<div class='kjøp'>
+							<a href='bestilling.php'> Request item </a>
+						</div>
+						<div class='beskrivelse'>
+							$beskrivelse
+						</div>
+					</div>";
 		
 		}
 
