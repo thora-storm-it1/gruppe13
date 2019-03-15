@@ -6,7 +6,7 @@
 <body style="font-family:Verdana;">
 
 <?php
-	include "kobling.php";
+	include "include/kobling.php";
 ?>
 
 <h1> Alle Varer </h1>
