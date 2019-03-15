@@ -16,7 +16,7 @@ body {
 	padding: 5px;
 }
 
-.top .tittel {
+.tittel {
 	text-align: center;
 	font-size: 2vw;
 	font-weight: bold;
@@ -25,7 +25,7 @@ body {
 	flex-grow: 2;
 }
 
-.top .navigering {
+.navigering {
 	display: flex;
 	float: right;
 	font-size: 1.3vw;
