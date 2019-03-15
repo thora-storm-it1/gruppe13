@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Vareoversikt </title>
+	<title> All wares </title>
 </head>
 
 <body style="font-family:Verdana;">
@@ -9,7 +9,7 @@
 	include "include/kobling.php";
 ?>
 
-<h1> Alle Varer </h1>
+<h1> All wares </h1>
 
 <?php
 	$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id ORDER BY kategori.kategori_id, varenavn";
@@ -18,9 +18,9 @@
 
 	echo "<table>
 			<tr>
-				<td>Kategori</td>
-				<td>Vare</td> 
-				<td>Pris</td>
+				<td>Category</td>
+				<td>Item</td> 
+				<td>Price</td>
 				<td>Rating</td>
 				<td class='varebilde'> </td>
 			</tr>";

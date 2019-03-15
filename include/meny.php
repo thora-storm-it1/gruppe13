@@ -3,7 +3,7 @@
 <head>
 	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="stilark/meny.css">
+	<link rel="stylesheet" href="./stilark/meny.css">
 </head>
 
 
@@ -26,7 +26,7 @@
 			</div>
 
 			<div class="dropdown">
-				<div class="lenke"> <a href="#"> Other </a> </div>
+				<div class="lenke"> <a href="#"> Others </a> </div>
 				<div class="dropdowninnhold">
 					<a href="#"> Lenke 1 </a>
 					<a href="#"> Lenke 2 </a>
@@ -35,7 +35,12 @@
 		</div>
 	</div>
 
-		
+<style>
+	body, .lenke, .dropdowninnhold{
+		font-family: Courier New;
+		/* ville ikke fungere via stilarket */
+	}
+</style>
 
 
 

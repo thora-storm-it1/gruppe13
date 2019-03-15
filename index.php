@@ -1,7 +1,7 @@
 <html>
 
 <head>
-	<title> Prosjekt 2019 </title>
+	<title> Prosjekt IT1 2019 </title>
 	<meta charset="UTF-8">
 </head>
 
@@ -21,10 +21,6 @@
 
 
 <style>
-	body{
-		font-family:Century Gothic;
-		margin:0;
-	}
 
 	.navigasjon{
 		display:flex;

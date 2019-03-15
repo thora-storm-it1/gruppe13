@@ -6,7 +6,25 @@
 </head>
 
 <body>
+	<div>
+		Your order has been placed. <br>
+		... <br>
+		We will be in touch.
+	</div> 
+	<div>
+		<a href="index.php"> Back to shop </a>
+	</div>
 
+<style>
+	div{
+		width: 90%;
+		line-height: 100px;
+		font-family: Courier New;
+		text-align: center;
+		margin: auto;
+		margin-top: 50px;
+	}
+</style>
 
 </body>
 </html>

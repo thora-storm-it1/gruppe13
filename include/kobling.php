@@ -1,6 +1,5 @@
 <html>
 <head>
-	<link rel="stylesheet" href="../stilark.css">
 	<meta charset="UTF-8">
 </head>
 <body>

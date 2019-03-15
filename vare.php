@@ -45,10 +45,13 @@
 								<h1> $varenavn </h1>
 							</div>
 							<div class='bilde'>
-								<img src='$bildeurl' width=150px>
+								<img src='$bildeurl' width=100%>
 							</div>
 						</div>
 						<div class='kolonne'>
+							<div class='beskrivelse'>
+								$beskrivelse
+							</div>
 							<div class='pris'>
 								The $varenavn currently goes for $$pris
 							</div>
@@ -57,9 +60,6 @@
 							</div>
 							<div class='kjøp'>
 								<a href='bestilling.php'> Request item </a>
-							</div>
-							<div class='beskrivelse'>
-								$beskrivelse
 							</div>
 						</div>
 					</div>";
@@ -70,7 +70,7 @@
 	?>
 
 
-<h2> Kommentarfelt </h2>
+<h2> Comments </h2>
 
 	<?php
 
@@ -101,7 +101,7 @@
 
 	?>
 
-<h3> Kommenter </h3>
+<h3> Leave a comment </h3>
 
 	<form method="POST">
 		Brukernavn
@@ -166,6 +166,7 @@
 <head>
 	<title> <?php echo "$varenavn" ?> </title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="stilark/vare.css">
 </head>
 
 
