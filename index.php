@@ -10,7 +10,7 @@
 
 
 	<?php
-		include "meny.php";
+		include "include/meny.php";
 	?>
 
 	<div class="innhold">

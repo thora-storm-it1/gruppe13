@@ -22,7 +22,7 @@
 			die("Du må velge en vare.");
 		}
 		
-		include "kobling.php";
+		include "include/kobling.php";
 
 
 		$sql="SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id WHERE vare_id=$vare_id";
