@@ -40,23 +40,27 @@
 
 				echo "
 					<div class='innpakning'>
-						<div class='varenavn'>
-							<h1> $varenavn </h1>
+						<div class='kolonne'>
+							<div class='varenavn'>
+								<h1> $varenavn </h1>
+							</div>
+							<div class='bilde'>
+								<img src='$bildeurl' width=150px>
+							</div>
 						</div>
-						<div class='bilde'>
-							<img src='$bildeurl' width=150px>
-						</div>
-						<div class='pris'>
-							The $varenavn currently goes for $$pris
-						</div>
-						<div class='rating'>
-							We have given the $varenavn a rating of $rating/10
-						</div>
-						<div class='kjøp'>
-							<a href='bestilling.php'> Request item </a>
-						</div>
-						<div class='beskrivelse'>
-							$beskrivelse
+						<div class='kolonne'>
+							<div class='pris'>
+								The $varenavn currently goes for $$pris
+							</div>
+							<div class='rating'>
+								We have given the $varenavn a rating of $rating/10
+							</div>
+							<div class='kjøp'>
+								<a href='bestilling.php'> Request item </a>
+							</div>
+							<div class='beskrivelse'>
+								$beskrivelse
+							</div>
 						</div>
 					</div>";
 		
