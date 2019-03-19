@@ -1,5 +1,5 @@
 body {
-	font-family: Courier New;
+	font-family: "Courier New";
 	font-size: 17px;
 	margin: 0;
 	line-height: 28px;
@@ -14,7 +14,6 @@ body {
 	position: fixed;
 	top: 0;
 	padding: 5px;
-	font-family: Courier New;
 }
 
 .tittel {
@@ -39,6 +38,7 @@ body {
 	margin: 10px;
 	padding: 0;
 	border-radius: 8px;
+	font-family: "Courier New";
 }
 
 .lenke a{  
@@ -72,7 +72,8 @@ body {
 	padding: 30px;
 	font-size: 15px;
 	border-radius:0px;
-	}
+	font-family: "Courier New";
+}
 
 .dropdowninnhold{
 	display:none;
