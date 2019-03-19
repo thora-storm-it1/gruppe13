@@ -16,9 +16,7 @@
 		We will be in touch.
 	</div> 
 	<div>
-		<?php echo "
-		<a href='oversikt.php?darkmode=$darkmode'> Back to shop </a>"
-		?>
+		<a href="index.php"> Back to shop </a>
 	</div>
 
 <style>
