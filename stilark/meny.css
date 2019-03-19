@@ -1,3 +1,4 @@
+
 body {
 	font-family: "Courier New";
 	font-size: 17px;
@@ -6,17 +7,20 @@ body {
 }
 
 .top {
+	font-family: Verdana;
+	font-size: 17px;
 	width: 100%;
 	background-color: #111111;
 	display: flex;
 	flex: 1;
 	color: #e2df0f;
 	position: fixed;
+
 	top: 0;
 	padding: 5px;
 }
 
-.tittel {
+.top .tittel {
 	text-align: center;
 	font-size: 2vw;
 	font-weight: bold;
@@ -25,10 +29,11 @@ body {
 	flex-grow: 2;
 }
 
-.navigering {
+.top .navigering {
 	display: flex;
 	float: right;
 	font-size: 1.3vw;
+	font-family: Century Gothic;
 	margin-top: 10px;
 	margin-right: 50px;
 }
