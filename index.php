@@ -6,7 +6,7 @@
 </head>
 
 
-<body style="margin:0">
+<body>
 
 
 	<div style="position:fixed; margin-top:120px;">

@@ -10,7 +10,7 @@
 </head>
 
 
-<body>
+<body style="margin:0;">
 
 	<div class="top">
 		<div class="tittel"> Yeet </div>
