@@ -1,13 +1,13 @@
 <html>
 
 <head>
-	<title> Prosjekt IT1 2019 </title>
+	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
+
 </head>
 
 
 <body>
-
 
 	<div style="position:fixed; margin-top:120px;">
 			<form method="POST" action=''>
@@ -25,8 +25,6 @@
 					$darkmode = 0;
 				}
 
-			include "include/darkmode.php";
-
 			echo "</div>";
 			
 			include "include/meny.php";
@@ -34,7 +32,7 @@
 		?>
 
 
-	<div class="innhold">
+	<div class="innhold" style="height:50000px;">
 	</div>
 
 </body>
@@ -42,6 +40,10 @@
 
 
 <style>
+	body{
+		font-family:Century Gothic;
+		margin:0;
+	}
 
 	.navigasjon{
 		display:flex;
@@ -68,11 +70,18 @@
 		else{
 			echo".lightmode{display:none;";
 		}
+
+
 	?>
-
-
 </style>
 
+<head>
+	<?php
+		if($darkmode == 1){
+			echo" <link rel='stylesheet' href='stilark/darkmode.css'>";
+		}
+	?>
+</head>
 
 
 </html>
