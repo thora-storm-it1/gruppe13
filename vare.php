@@ -13,7 +13,7 @@
 
 	<?php
 
-
+		include "include/darkmode.php";
 
 		if(isset($_GET["vare_id"])){
 			$vare_id = $_GET["vare_id"];

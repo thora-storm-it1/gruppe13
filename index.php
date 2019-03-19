@@ -6,7 +6,7 @@
 </head>
 
 
-<body>
+<body style="margin:0">
 
 
 	<div style="position:fixed; margin-top:120px;">
@@ -29,7 +29,7 @@
 
 			echo "</div>";
 			
-			include "meny.php";
+			include "include/meny.php";
 			
 		?>
 
