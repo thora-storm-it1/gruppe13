@@ -59,7 +59,7 @@
 								We have given the $varenavn a rating of $rating/10
 							</div>
 							<div class='kjøp'>
-								<a href='bestilling.php'> Request item </a>
+								<a href='bestilling.php?darkmode=$darkmode'> Request item </a>
 							</div>
 						</div>
 					</div>";

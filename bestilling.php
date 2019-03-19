@@ -5,6 +5,10 @@
 	<meta charset="UTF-8">
 </head>
 
+<?php
+	include "include/darkmode.php";
+?>
+
 <body>
 	<div>
 		Your order has been placed. <br>
