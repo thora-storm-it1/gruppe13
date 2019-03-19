@@ -1,22 +1,5 @@
 <html>
 
-<head>
-	<?php
-		if(isset($_GET["vare_id"])){
-			$vare_id = $_GET["vare_id"];
-		}
-		else{
-			die("Du må velge en vare.");
-		}
-
-		include "include/darkmode.php";
-	?>
-
-
-
-
-</head>
-
 <style>
 	table{border-collapse:collapse;}
 	td {border:1px solid}
@@ -28,20 +11,18 @@
 
 <! Vareinformasjon ->
 
-	<?php		
-		$tjener = "localhost";
-		$brukernavn = "root";
-		$passord = "";
-		$database = "prosjekt2019";
+	<?php
 
-		$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
+		include "include/darkmode.php";
 
-
-		if ($kobling->connect_error) {
-			die("Noe gikk galt: " . $kobling->connect_error);
+		if(isset($_GET["vare_id"])){
+			$vare_id = $_GET["vare_id"];
 		}
-
-		$kobling->set_charset("utf8");
+		else{
+			die("Du må velge en vare.");
+		}
+		
+		include "include/kobling.php";
 
 
 		$sql="SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id WHERE vare_id=$vare_id";
@@ -58,12 +39,30 @@
 
 
 				echo "
-						<h1> $varenavn </h1> <br>
-						<img src='$bildeurl' width=150px>
-						<p> $beskrivelse <p>
-						The $varenavn goes for $$pris <br>
-						We have given the $varenavn a rating of $rating/10
-						";
+					<div class='innpakning'>
+						<div class='kolonne'>
+							<div class='varenavn'>
+								<h1> $varenavn </h1>
+							</div>
+							<div class='bilde'>
+								<img src='$bildeurl' width=100%>
+							</div>
+						</div>
+						<div class='kolonne'>
+							<div class='beskrivelse'>
+								$beskrivelse
+							</div>
+							<div class='pris'>
+								The $varenavn currently goes for $$pris
+							</div>
+							<div class='rating'>
+								We have given the $varenavn a rating of $rating/10
+							</div>
+							<div class='kjøp'>
+								<a href='bestilling.php'> Request item </a>
+							</div>
+						</div>
+					</div>";
 		
 		}
 
@@ -71,7 +70,7 @@
 	?>
 
 
-<h2> Kommentarfelt </h2>
+<h2> Comments </h2>
 
 	<?php
 
@@ -102,7 +101,7 @@
 
 	?>
 
-<h3> Kommenter </h3>
+<h3> Leave a comment </h3>
 
 	<form method="POST">
 		Brukernavn
@@ -126,29 +125,33 @@
 			}
 
 			if($kommentartekst != ""){
-							
-
+			
 				$sql_1 = "INSERT INTO bruker (brukernavn) VALUES ('$brukernavn')";
 				$sql_2 = "SELECT bruker_id FROM bruker WHERE bruker.brukernavn='$brukernavn'";
 
 				$kobling->query($sql_1);
 
-				$resultat2 = $kobling->query($sql_2);			
+				$resultat2 = $kobling->query($sql_2);
 
-				$rad1 = $resultat2->fetch_assoc();
-
-				$bruker_id = $rad1["bruker_id"];
-
-				$sql_3 = "INSERT INTO kommentar (kommentartekst, kommentar.vare_id, kommentar.bruker_id) VALUES ('$kommentartekst', '$vare_id', '$bruker_id')";
 			
-				$kobling->query($sql_3);
+			
 
-				header("Refresh:0");
+			$rad1 = $resultat2->fetch_assoc();
+
+			$bruker_id = $rad1["bruker_id"];
+
+			$sql_3 = "INSERT INTO kommentar (kommentartekst, kommentar.vare_id, kommentar.bruker_id) VALUES ('$kommentartekst', '$vare_id', '$bruker_id')";
+
+			
+
+			if($kobling->query($sql_3)) {
+			header("Refresh:0");
 			}
 
-			else{
-				echo "<p style='color:red;'> Skriv inn en kommentar </p>";
-		}
+			}
+
+
+
 		}		
 			
 	?>
@@ -161,12 +164,11 @@
 </body>
 
 <head>
-	<?php
-		echo "<title> '$varenavn' </title>";
-		echo "<meta charset='UTF-8'>";
-	?>
-
-
+	<title> <?php echo "$varenavn" ?> </title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="stilark/vare.css">
 </head>
+
+
 
 </html>
