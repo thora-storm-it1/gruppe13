@@ -1,5 +1,5 @@
 .top {
-	font-family: Verdana;
+	font-family: "Courier New";
 	font-size: 17px;
 	width: 100%;
 	background-color: #111111;
@@ -22,7 +22,6 @@
 	display: flex;
 	float: right;
 	font-size: 1.3vw;
-	font-family: Century Gothic;
 	margin-top: 10px;
 	margin-right: 50px;
 }
