@@ -4,6 +4,9 @@
 	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./stilark/meny.css">
+	<?php 
+		include "include/darkmode.php";
+	?>
 </head>
 
 
@@ -14,7 +17,7 @@
 		<div class="navigering">
 
 			<div>
-				<div class="lenke"> <a href='oversikt.php'> All wares </a> </div>
+				<div class="lenke"> <a href='oversikt.php?darkmode=$darkmode'> All wares </a> </div>
 			</div>
 
 			<div>

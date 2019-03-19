@@ -38,7 +38,7 @@
 		echo "
 			<tr>
 				<td>$kategorinavn</td>
-				<td><a href='vare.php?vare_id=$vare_id'> $varenavn </a></td> 
+				<td><a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'> $varenavn </a></td> 
 				<td>$pris$ </td>
 				<td>$rating</td>
 			</tr>"; 
