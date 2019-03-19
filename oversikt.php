@@ -7,6 +7,7 @@
 
 <?php
 	include "include/kobling.php";
+	include "include/meny.php";
 ?>
 
 <h1> All wares </h1>
