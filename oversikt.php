@@ -7,7 +7,6 @@
 
 <?php
 	include "include/kobling.php";
-	include "include/darkmode.php"
 ?>
 
 <h1> All wares </h1>
