@@ -79,18 +79,20 @@
 
 		$resultat1 = $kobling->query($sql);
 
-		echo "<table> <tr> <td> Brukernavn </td> <td> Kommentar </td> <td> Publisert </td> </tr>";
+		echo "<table> <tr> <td> Username </td> <td> </td> <td> Published </td> </tr>";
 
 		while($rad = $resultat1->fetch_assoc()){
 
 			$brukernavn = $rad["brukernavn"];
 			$kommentartekst = $rad["kommentartekst"];
-			$tid = $rad["tid"];
+			$tid1 = date_create($rad["tid"]);
+			$dato = date_format($tid1, 'd.m.y');
+			$tid = date_format($tid1, 'H:i');
 
 			echo "<tr>
 					<td>$brukernavn</td>
 					<td>$kommentartekst</td>
-					<td>$tid</td>
+					<td>$dato at $tid</td>
 					</tr>";
 		}
 
