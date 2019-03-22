@@ -132,30 +132,19 @@
 				$sql_2 = "SELECT bruker_id FROM bruker WHERE bruker.brukernavn='$brukernavn'";
 
 				$kobling->query($sql_1);
-
 				$resultat2 = $kobling->query($sql_2);
+				$rad1 = $resultat2->fetch_assoc();
+				$bruker_id = $rad1["bruker_id"];
 
-			
-			
+				$sql_3 = "INSERT INTO kommentar (kommentartekst, kommentar.vare_id, kommentar.bruker_id) VALUES ('$kommentartekst', '$vare_id', '$bruker_id')";
 
-			$rad1 = $resultat2->fetch_assoc();
+				
 
-			$bruker_id = $rad1["bruker_id"];
-
-			$sql_3 = "INSERT INTO kommentar (kommentartekst, kommentar.vare_id, kommentar.bruker_id) VALUES ('$kommentartekst', '$vare_id', '$bruker_id')";
-
-			
-
-			if($kobling->query($sql_3)) {
-			header("Refresh:0");
+				if($kobling->query($sql_3)) {
+				header("Refresh:0");
+				}
 			}
-
-			}
-
-
-
-		}		
-			
+		}				
 	?>
 	
 
