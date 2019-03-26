@@ -1,11 +1,16 @@
 <head>
-		<?php		
-			if(isset($_GET["darkmode"])){
-				$darkmode = $_GET["darkmode"];
+	<?php	
+
+		if(isset($_GET["darkmode"])){
+			$darkmode = $_GET["darkmode"];
+	
+			if($darkmode == 1){
+				echo" <link rel='stylesheet' href='stilark/darkmode.css'>";
 			}
-		
-		if($darkmode == 1){
-			echo" <link rel='stylesheet' href='stilark/darkmode.css'>";
+		}
+
+		else{
+			$darkmode = 0;
 		}
 	?>
 </head>

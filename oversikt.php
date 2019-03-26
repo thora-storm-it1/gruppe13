@@ -2,6 +2,9 @@
 <head>
 	<title> Vareoversikt </title>
 	<?php
+		$url = "oversikt.php";
+		include "include/darkmode.php";
+		include "include/meny.php";
 
 		if(isset($_GET["darkmode"])){
 				$darkmode = $_GET["darkmode"];
@@ -17,8 +20,19 @@
 
 <?php
 
-include "include/meny.php";
-include "kobling.php";
+$tjener = "localhost";
+$brukernavn = "root";
+$passord = "";
+$database = "prosjekt2019";
+
+$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
+
+
+if ($kobling->connect_error) {
+	die("Noe gikk galt: " . $kobling->connect_error);
+}
+
+$kobling->set_charset("utf8");
 
 ?>
 
