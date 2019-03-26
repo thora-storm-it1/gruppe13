@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Vareoversikt </title>
+	<title> Wares </title>
 	<?php
 		$url = "oversikt.php";
 		include "include/darkmode.php";
@@ -13,6 +13,9 @@
 			echo" <link rel='stylesheet' href='stilark/darkmode.css'>";
 		}
 	?>
+
+	<link rel="stylesheet" href="stilark/oversikt.css">
+
 </head>
 
 
@@ -84,14 +87,3 @@ $kobling->set_charset("utf8");
 
 
 </body>
-
-
-<style>
-	table{border-collapse:collapse;}
-	td {border:1px solid;}
-	.varebilde{display:block;}
-	
-
-</style>
-
-
