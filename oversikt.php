@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title> Wares </title>
+	<link rel="stylesheet" href="stilark/oversikt.css">
 	<?php
 		$url = "oversikt.php";
 		include "include/darkmode.php";
@@ -13,77 +14,49 @@
 			echo" <link rel='stylesheet' href='stilark/darkmode.css'>";
 		}
 	?>
-
-	<link rel="stylesheet" href="stilark/oversikt.css">
-
 </head>
 
 
-<body style="font-family:Verdana;">
+<body>
 
-<?php
-
-$tjener = "localhost";
-$brukernavn = "root";
-$passord = "";
-$database = "prosjekt2019";
-
-$kobling = new mysqli($tjener, $brukernavn, $passord, $database);
-
-
-if ($kobling->connect_error) {
-	die("Noe gikk galt: " . $kobling->connect_error);
-}
-
-$kobling->set_charset("utf8");
-
-?>
-
-<h1> Alle Varer </h1>
 	<?php
-
-		
-
-	
-		$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id ORDER BY kategori.kategori_id, varenavn";
-
-		$resultat = $kobling->query($sql);
-
-		echo "<table>
-				<tr>
-					<td>Kategori</td>
-					<td>Vare</td> 
-					<td>Pris</td>
-					<td>Rating</td>
-				</tr>";
-
-		while($rad = $resultat->fetch_assoc()){
-			$kategorinavn = $rad["kategorinavn"];
-			$varenavn = $rad["varenavn"];
-			$rating = $rad["rating"];
-			$vare_id = $rad["vare_id"];
-			$pris = $rad["pris"];
-			
-
-
-
-			echo "
-				<tr>
-					<td>$kategorinavn</td>
-					<td class='varenavn'><a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'> $varenavn </a></td> 
-					<td>$pris$ </td>
-					<td>$rating</td>
-				</tr>";
-				
-		}
-
-		echo "</table>";
+		include "include/kobling.php";
 	?>
 
+	<h1> Alle Varer </h1>
+		<div class="innpakning">
+			<?php
+				$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id ORDER BY kategori.kategori_id, varenavn";
 
+				$resultat = $kobling->query($sql);
 
-
-
-
-
+				echo 
+					"<div class='rad'>
+						<table>
+						<tr>
+							<th>Item</th>
+							<th>Category</th> 
+							<th>Price</th>
+							<th>Rating</th>
+						</tr>
+					</div>";
+				while($rad = $resultat->fetch_assoc()){
+					$varenavn = $rad["varenavn"];
+					$kategorinavn = $rad["kategorinavn"];
+					$rating = $rad["rating"];
+					$vare_id = $rad["vare_id"];
+					$pris = $rad["pris"];
+					echo 
+						"<div class='rad'>
+							<tr>
+								<td class='vare'><a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'> $varenavn </a></td> 
+								<td>$kategorinavn</td>
+								<td>$pris$ </td>
+								<td>$rating</td>
+							</tr>
+						</div>";	
+				}
+				echo "</table>";
+			?>
+		</div>
 </body>

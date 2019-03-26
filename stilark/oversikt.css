@@ -1,0 +1,45 @@
+body{
+	margin: 0;
+	font-family: Courier New;
+}
+
+table{
+	font-size: 17px;
+	border-collapse:collapse;
+	width: 100%;
+}
+
+td, th{
+	border:1px solid;
+	padding: 10px;
+	text-align: center;
+}
+
+.varebilde{
+	display:block;
+}
+
+.innpakning{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	margin-top: 50px;
+	width: 90%;
+	background-color: blue;
+	padding: 5px;
+}
+
+.rad{
+	background-color: red;
+	width: 100%;
+}
+
+.vare a{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.vare a:hover{
+	text-decoration: underline;
+}
