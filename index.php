@@ -4,7 +4,7 @@
 	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
 	<?php 
-		$url = "index.php"
+		$url = "index.php?a=1"
 
 	?>
 
@@ -15,6 +15,7 @@
 
 		<?php
 			include "include/darkmode.php";	
+			
 			include "include/meny.php";
 			?>
 
