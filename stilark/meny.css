@@ -47,7 +47,7 @@ body{
 	font-weight: bold;
 	line-height: 50px;
 	display: flex;
-	min-width: 150px;
+	min-width: 250px;
 	flex-grow: 1;
 	justify-content: center;
 }
@@ -60,6 +60,8 @@ body{
 
 	}
 
+
+
 .dropdowninnhold a{ 
 	color: black;
 	text-decoration: none;
@@ -71,16 +73,17 @@ body{
 .dropdowninnhold{
 	height: 0;
 	position:absolute; 
-	width:150px;
 	margin-left: 10px;
 	background-color:#F0F006;
-	border-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 	transition: 0.5s;
 	overflow: hidden;
+	width: 250px;
 	}
 
 .dropdown:hover .dropdowninnhold{
-	height: 150px; 
+	height: 134px; 
 	}
 
 .dropdowninnhold a:hover{
