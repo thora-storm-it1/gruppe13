@@ -26,7 +26,7 @@
 					<div class='lenke'> <a href='#''> More </a> </div>
 					<div class='dropdowninnhold'>
 						<a href='darkmodetoggle.php?darkmode=$darkmode&url=$url'> Toggle darkmode </a>
-						<a href='#''> Special services </a>
+						<a href='special.php?darkmode=$darkmode'> Special services </a>
 					</div>
 				</div>"
 			?>

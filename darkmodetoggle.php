@@ -17,16 +17,3 @@
 
 ?>
 </body>
-
-
-
-<head>
-	<?php
-		if(isset($_POST['darkmode'])){
-			echo ".darkmode{display:none};";
-		}
-		else{
-			echo".lightmode{display:none;";
-		}
-	?>
-</head>
