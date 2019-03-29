@@ -17,7 +17,7 @@
 	</div> 
 	<div>
 		<?php
-			echo "<a href='oversikt.php?darkmode=$darkmode'> Back to shop </a>";
+			echo "<a href='index.php?darkmode=$darkmode'> Back to shop </a>";
 		?>
 	</div>
 

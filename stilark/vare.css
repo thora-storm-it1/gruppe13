@@ -1,9 +1,14 @@
 body{
 	font-family: Courier New;
+	margin: 0;
 }
 
 h1{
 	margin: 0;
+}
+
+.filler{
+	height: 100px;
 }
 
 .innpakning{
@@ -34,16 +39,11 @@ h1{
 	flex-grow: 1;
 }
 
-.beskrivelse{
+.beskrivelse, .pris, .rating{
 	background-color: orange;
-}
-
-.pris{
-	background-color: grey;
-}
-
-.rating{
-	background-color: white;
+	border: 1px solid;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 .kjøp{
@@ -60,4 +60,9 @@ h1{
 	flex-grow: 1;
 	line-height: 50px;
 	text-decoration: none;
+}
+
+.kommentarfelt{
+	width: 100%;
+	background-color: magenta;
 }

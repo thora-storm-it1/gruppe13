@@ -4,7 +4,7 @@
 	<title> Prosjekt 2019 </title>
 	<meta charset="UTF-8">
 	<?php 
-		$url = "index.php?a=1"
+		$url = "index.php"
 
 	?>
 
@@ -15,7 +15,6 @@
 
 		<?php
 			include "include/darkmode.php";	
-			
 			include "include/meny.php";
 			?>
 
@@ -29,7 +28,7 @@
 
 <style>
 	body{
-		font-family:Century Gothic;
+		font-family: Courier New;
 		margin:0;
 	}
 

@@ -3,7 +3,7 @@
 	<title> Wares </title>
 	<link rel="stylesheet" href="stilark/oversikt.css">
 	<?php
-		$url = "oversikt.php?a=1";
+		$url = "oversikt.php";
 		include "include/darkmode.php";
 		include "include/meny.php";
 

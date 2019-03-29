@@ -8,11 +8,11 @@
 			}
 	
 	if($darkmode == 1){
-		header("Location: $url&darkmode=0");
+		header("Location: $url?darkmode=0");
 	}
 
 	else{
-		header("Location: $url&darkmode=1");
+		header("Location: $url?darkmode=1");
 	}
 
 ?>
