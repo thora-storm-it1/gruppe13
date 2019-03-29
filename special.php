@@ -26,7 +26,7 @@
 	<h1> Alle Varer </h1>
 		<div class="innpakning">
 			<?php
-				$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id AND NOT kategori.kategori_id=3 ORDER BY kategori.kategori_id, varenavn";
+				$sql = "SELECT * FROM kategori JOIN vare ON vare.kategori_id=kategori.kategori_id WHERE kategori.kategori_id=3 ORDER BY varenavn";
 
 				$resultat = $kobling->query($sql);
 
@@ -35,14 +35,14 @@
 						<table>
 						<tr>
 							<th>Item</th>
-							<th>Category</th> 
+							<th>Image</th> 
 							<th>Price</th>
 							<th>Rating</th>
 						</tr>
 					</div>";
 				while($rad = $resultat->fetch_assoc()){
 					$varenavn = $rad["varenavn"];
-					$kategorinavn = $rad["kategorinavn"];
+					$bildeurl = $rad["bildeurl"];
 					$rating = $rad["rating"];
 					$vare_id = $rad["vare_id"];
 					$pris = $rad["pris"];
@@ -50,7 +50,7 @@
 						"<div class='rad'>
 							<tr>
 								<td class='vare'><a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'> $varenavn </a></td> 
-								<td>$kategorinavn</td>
+								<td> <img src='$bildeurl' height='200px'></td>
 								<td>$pris$ </td>
 								<td>$rating</td>
 							</tr>
