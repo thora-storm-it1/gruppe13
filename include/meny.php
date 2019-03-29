@@ -22,14 +22,6 @@
 					<div class='lenke'> <a href='oversikt.php?darkmode=$darkmode'> All wares </a> </div>
 				</div>
 
-				<div>
-					<div class='lenke'> <a href='#''> Arms </a> </div>
-				</div>
-
-				<div>
-					<div class='lenke'> <a href='#'> Armor </a> </div>
-				</div>
-
 				<div class='dropdown'>
 					<div class='lenke'> <a href='#''> Others </a> </div>
 					<div class='dropdowninnhold'>
