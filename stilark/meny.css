@@ -58,19 +58,18 @@
 
 .dropdowninnhold a{ 
 	color: black;
-	background-color:gray;
 	text-decoration: none;
 	display: block; 
 	padding: 30px;
 	font-size: 15px;
-	border-radius:0px;
+	border-radius:5px;
 	}
 
 .dropdowninnhold{
 	display:none;
 	position:absolute; 
 	width:150px;
-	margin-left:20px;
+	margin-left: 10px;
 	background-color:#F0F006;
 	border-radius: 5px;
 	}
