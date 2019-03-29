@@ -87,14 +87,15 @@
 			$dato = date_format($tid1, 'd.m.y');
 			$tid = date_format($tid1, 'H:i');
 
-			echo 
-				"<div class='kommentar'>
-					<div class='kommentarinfo'>
-						<div> $brukernavn </div>
-						<div> Posted $dato at $tid </div> 
-					</div> 
-					<div class='kommentartekst'> $kommentartekst </div>
-				</div><br>";
+			echo "
+				<div class=''
+					<div class='kommentar'>
+						<div class='kommentarinfo'>
+							<div> $brukernavn </div>
+							<div> Posted $dato at $tid </div> 
+						</div> 
+						<div class='kommentartekst'> $kommentartekst </div>
+					</div><br>";
 		}
 
 	?>

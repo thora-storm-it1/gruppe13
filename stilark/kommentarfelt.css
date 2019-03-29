@@ -29,5 +29,10 @@
 		min-height:8%;
 		padding-top:3%;
 		padding-left:2%;
+		resize: none;
+	}
+
+	textarea{
+		resize: none;
 	}
 
