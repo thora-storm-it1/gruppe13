@@ -23,7 +23,7 @@
 	}
 	
 	include "include/kobling.php";
-	$url = "vare.php?a=1";
+	$url = "vare.php?vare_id=$vare_id";
 	include "include/meny.php";
 
 
