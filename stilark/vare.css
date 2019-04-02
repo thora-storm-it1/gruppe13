@@ -11,44 +11,44 @@ h1{
 }
 
 .innpakning{
-	background-color: red;
-	padding: 5px; margin: auto;
+	background-color: #cccccc;
+	padding: 30px; margin: auto;
 	display: flex; flex-flow: row wrap;
 	width:90%;
+	border-radius: 3px;
 }
 
 .kolonne{
-	background-color: blue;
 	display: flex; flex-grow: 1; flex-flow: column;
 	border: 1px solid;
+	width: 40%; max-height: 500px;
 	padding: 10px;
-	width: 40%;
 }
 
 .varenavn{
-	background-color: lime;
+	background-color: #F4EF57;
 	flex-grow: 1;
-	padding: 10px;
+	padding: 15px;
+	max-height: 40px;
 
 }
 
 .bilde{
-	background-color: green;
-	padding: 5px;
+	padding: 15px;
 	flex-grow: 1;
 }
 
 .beskrivelse, .pris, .rating{
-	background-color: orange;
-	border: 1px solid;
-	padding: 5px;
-	border-radius: 5px;
+	background-color: #dddddd;
+	padding: 5px; margin: 5px;
+	border-radius: 3px;
 }
 
 .kjøp{
 	background-color: yellow;
 	display: flex;
 	width: 200px;
+	margin: 5px;
 	padding: 0;
 	text-align: center;
 	border-radius: 5px;
@@ -63,5 +63,9 @@ h1{
 
 .kommentarfelt{
 	width: 100%;
-	background-color: magenta;
+	border: 1px solid;
+	padding: 10px;
+	margin-top: 30px;
+	display: flex;
+	flex-flow: row wrap;
 }

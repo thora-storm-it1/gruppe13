@@ -1,22 +1,11 @@
-/*Kommenter:*/
-	.kommenter{
-		display: flex;
-		flex-flow: column wrap;
-	}
-
-	.brukernavn{
-		flex-grow: 1;
-	}
-
 /*Kommentarfelt:*/
 	.kommentar {
 		display:flex;
 		flex-flow:column wrap;
-		width:40%;
+		width:20%;
 	}
 	.kommentarinfo {
 		background-color:grey;
-		flex-grow:1;
 	}
 	.kommentarinfo div {
 	
@@ -34,5 +23,12 @@
 
 	textarea{
 		resize: none;
+		width: 100%;
 	}
 
+	.kommentarer, .kolonne{
+		display: flex; flex-grow: 1; flex-flow: column;
+		border: 1px solid;
+		width: 40%;
+		padding: 10px;
+	}

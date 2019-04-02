@@ -47,7 +47,7 @@
 							<h1> $varenavn </h1>
 						</div>
 						<div class='bilde'>
-							<img src='$bildeurl' width=100%>
+							<img src='$bildeurl' width='100%'>
 						</div>
 					</div>
 					<div class='kolonne'>
