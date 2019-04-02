@@ -5,7 +5,7 @@
 	}
 
 	.brukernavn{
-		flex-grow
+		flex-grow: 1;
 	}
 
 /*Kommentarfelt:*/
