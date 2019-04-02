@@ -1,36 +1,22 @@
 .preview{
 	background-color:red;
 	display:flex;
-	padding:0;
-	justify-content: space-between;
-	width:330px;
-}
-
-.vare{
-	display:flex;
-	background-color:yellow;
-	flex-flow: row wrap;
-	align-items: bottom;
+	flex-flow:row wrap;
+	width:340px;
+	padding-left:9px;
+	padding-bottom:9px;
 	margin:auto;
-	
 }
 
-.varebilde{
-	min-width:100%;
-	align-self: center;
-	background-color:green;
-	padding:5px;
-	width:100px;
-	max-height:150px;
+.topsellers{
+	width:100%;
+}
+.vare{
+	background-color:white;
+	flex-grow:1;
 }
 
 img{
-	max-height:150px;
-	max-width:100px;
-}
-
-.tekstlenke{
-	background-color: purple;
-	align-items:bottom;
-	margin:auto;
+	height:120px;
+	width:110px;
 }

@@ -24,9 +24,12 @@
 
 <div class="innhold">
 
-	<h3> Black marked wares for all your needs </h3>
+	<h3> Black marked wares for all your needs: </h3>
+
+	
 
 	<div class="preview">
+		<div class="topsellers"><h2 width="100%"> You might also like </h2></div>
 		<?php
 			$sql = "SELECT * FROM vare ORDER BY RAND() LIMIT 3";
 			$resultat = $kobling->query($sql);
@@ -39,15 +42,7 @@
 				$pris = $rad["pris"];
 
 				echo "
-					<div class='vare'>
-						<div class='varebilde'>
-							<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'><img src='$bildeurl'> </a>
-						</div>
-
-						<div class='tekstlenke'>
-							<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'>$varenavn </a>
-						</div>
-					</div>";
+					<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'>	<div class='vare'><img src='$bildeurl'></div></a>";
 			}
 
 
