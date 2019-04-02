@@ -9,22 +9,28 @@
 .vare{
 	display:flex;
 	background-color:yellow;
-	flex-flow: column nowrap;
+	flex-flow: row wrap;
 	align-items: bottom;
 	margin:auto;
-	flex-grow:1;
+	
 }
 
 .varebilde{
-	flex-grow:1;
+	min-width:100%;
 	align-self: center;
 	background-color:green;
 	padding:5px;
+	width:100px;
+	max-height:150px;
+}
+
+img{
+	max-height:150px;
+	max-width:100px;
 }
 
 .tekstlenke{
-	flex-grow:1;
-	align-self: flex-end;
-	background-color: blue;
-	align-items:auto;
+	background-color: purple;
+	align-items:bottom;
+	margin:auto;
 }

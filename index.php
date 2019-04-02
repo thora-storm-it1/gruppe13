@@ -29,27 +29,26 @@
 	<div class="preview">
 		<?php
 			$sql = "SELECT * FROM vare ORDER BY RAND() LIMIT 3";
+			$resultat = $kobling->query($sql);
 
-				$resultat = $kobling->query($sql);
+			while($rad = $resultat->fetch_assoc()){		
+				$varenavn = $rad["varenavn"];
+				$bildeurl = $rad["bildeurl"];
+				$rating = $rad["rating"];
+				$vare_id = $rad["vare_id"];
+				$pris = $rad["pris"];
 
-				while($rad = $resultat->fetch_assoc()){		
-					$varenavn = $rad["varenavn"];
-					$bildeurl = $rad["bildeurl"];
-					$rating = $rad["rating"];
-					$vare_id = $rad["vare_id"];
-					$pris = $rad["pris"];
+				echo "
+					<div class='vare'>
+						<div class='varebilde'>
+							<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'><img src='$bildeurl'> </a>
+						</div>
 
-					echo "
-						<div class='vare'>
-							<div class='varebilde'>
-								<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'><img src='$bildeurl' width=100px> </a>
-							</div>
-
-							<div class='tekstlenke'>
-								<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'>$varenavn </a>
-							</div>
-						</div>";
-				}
+						<div class='tekstlenke'>
+							<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'>$varenavn </a>
+						</div>
+					</div>";
+			}
 
 
 		?>
