@@ -10,11 +10,11 @@
 
 		<table class="kommenter">
 			<tr>
-				<td>Brukernavn</td>
+				<td>Name</td>
 				<td><input type="text" name="brukernavn" class="brukernavn"></td>
 			</tr>
 			<tr>
-				<td>Kommentar</td>
+				<td>Comment</td>
 				<td><textarea rows="5" cols="80" name="kommentartekst"></textarea></td>
 			</tr>
 		</table>
