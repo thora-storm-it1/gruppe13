@@ -36,6 +36,12 @@ h1{
 .bilde{
 	padding: 15px;
 	flex-grow: 1;
+	display: flex;
+	justify-content: center;
+}
+
+img{
+	max-height:100%;
 }
 
 .beskrivelse, .pris, .rating{
