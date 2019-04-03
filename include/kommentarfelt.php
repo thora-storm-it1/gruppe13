@@ -18,8 +18,9 @@
 						<td><textarea rows="5" cols="80" name="kommentartekst"></textarea></td>
 					</tr>
 				</table>
-
-				<input type="submit" name="leggtil" value="Comment">
+				<div class="kommentarknapp">
+					<input type="submit" name="leggtil" value="Comment">
+				</div>
 	</div>
 
 
@@ -89,7 +90,6 @@
 				$tid = date_format($tid1, 'H:i');
 
 				echo "
-					<div class=''
 						<div class='kommentar'>
 							<div class='kommentarinfo'>
 								<div> $brukernavn </div>

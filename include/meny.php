@@ -14,7 +14,7 @@
 <body>
 	
 	<div class="top">
-		<div class="tittel"> <?php echo "<a href='index.php?darkmode=$darkmode'> "?> Fiber Route 3.0 </a> </div>
+		<div class="tittel"> <?php echo "<a href='index.php?darkmode=$darkmode'> "?> Ammu-Nation </a> </div>
 		<div class="navigering">
 			<?php
 				echo"

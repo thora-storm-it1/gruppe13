@@ -26,11 +26,11 @@ h1{
 }
 
 .varenavn{
-	background-color: #F4EF57;
+	background-color: yellow;
 	flex-grow: 1;
 	padding: 15px;
 	max-height: 40px;
-
+	border-radius: 3px;
 }
 
 .bilde{

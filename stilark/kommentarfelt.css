@@ -2,13 +2,11 @@
 	.kommentar {
 		display:flex;
 		flex-flow:column wrap;
-		width:20%;
+		width:100%;
 	}
 	.kommentarinfo {
 		background-color:grey;
-	}
-	.kommentarinfo div {
-	
+		padding: 5px;
 	}
 
 	.kommentartekst{
@@ -16,12 +14,11 @@
 		border-bottom-right-radius: 8px;
 		border-bottom-left-radius: 8px;
 		min-height:8%;
-		padding-top:3%;
-		padding-left:2%;
+		padding: 5px;
 		resize: none;
 	}
 
-	textarea{
+	textarea, .brukernavn{
 		resize: none;
 		width: 100%;
 	}

@@ -24,12 +24,17 @@
 
 <div class="innhold">
 
-	<h3> Black marked wares for all your needs: </h3>
-
-	
+	<h3> <i> Ammu-Nation. The go-to site for all things self defense, -and offense. <i> </h3>
 
 	<div class="preview">
-		<div class="topsellers"><h2 width="100%"> You might also like </h2></div>
+		<div class="overskrift"> <h2> Our top sellers </h2> </div>
+			<a href="vare.php?vare_id=2&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
+			<a href="vare.php?vare_id=3&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
+			<a href="vare.php?vare_id=3&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
+	</div>
+
+	<div class="preview">
+		<div class="overskrift"><h2> You might also like </h2></div>
 		<?php
 			$sql = "SELECT * FROM vare ORDER BY RAND() LIMIT 3";
 			$resultat = $kobling->query($sql);
