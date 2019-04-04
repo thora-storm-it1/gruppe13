@@ -58,7 +58,7 @@
 							The $varenavn currently goes for $$pris
 						</div>
 						<div class='rating'>
-							We have given the $varenavn a rating of $rating/10
+							We have given this item a rating of $rating/10
 						</div>
 						<div class='kjøp'>
 							<a href='bestilling.php?darkmode=$darkmode'> Request item </a>

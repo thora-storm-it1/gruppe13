@@ -30,7 +30,7 @@
 		<div class="overskrift"> <h2> Our top sellers </h2> </div>
 			<a href="vare.php?vare_id=2&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
 			<a href="vare.php?vare_id=3&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
-			<a href="vare.php?vare_id=3&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
+			<a href="vare.php?vare_id=8&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
 	</div>
 
 	<div class="preview">
