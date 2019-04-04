@@ -24,7 +24,7 @@
 
 <div class="innhold">
 
-	<h3> <i> Ammu-Nation. The go-to site for all things self defense, -and offense. <i> </h3>
+	<h3> <i> Ammu-Nation. Your go-to site for all things self defense, -and offense. <i> </h3>
 
 	<div class="preview">
 		<div class="overskrift"> <h2> Our top sellers </h2> </div>

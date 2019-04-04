@@ -52,7 +52,7 @@
 								<td class='vare'><a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'> $varenavn </a></td> 
 								<td>$kategorinavn</td>
 								<td>$pris$ </td>
-								<td>$rating</td>
+								<td>$rating/10</td>
 							</tr>
 						</div>";	
 				}

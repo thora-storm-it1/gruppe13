@@ -23,9 +23,9 @@
 		width: 100%;
 	}
 
-	.kommentarer, .kolonne{
+	.kommentarer{
 		display: flex; flex-grow: 1; flex-flow: column;
-		border: 1px solid;
 		width: 40%;
 		padding: 10px;
+		background-color: white;
 	}

@@ -67,6 +67,7 @@
 					<div class='kommentarfelt'>";
 				}	
 				include "include/kommentarfelt.php";
+
 	?>
 					</div>
 				</div>
@@ -78,7 +79,9 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="stilark/vare.css">
 </head>
-
+	<?php
+		include "include/darkmode.php"; /* for å få med stilarket */
+	?>
 
 
 </html>

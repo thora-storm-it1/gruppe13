@@ -2,6 +2,11 @@ body{
 	font-family: Courier New;
 }
 
+h3{
+	text-align: center;
+	margin: 30px;
+}
+
 .preview{
 	background-color:red;
 	display:flex;

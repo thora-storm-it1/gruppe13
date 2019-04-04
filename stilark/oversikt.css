@@ -12,6 +12,11 @@ td, th{
 	border:1px solid;
 	padding: 10px;
 	text-align: center;
+	background-color: #cccccc;
+}
+
+th{
+	background-color: #888888;
 }
 
 .varebilde{
@@ -25,12 +30,12 @@ td, th{
 	margin: auto;
 	margin-top: 50px;
 	width: 90%;
-	background-color: blue;
-	padding: 5px;
+	background-color: red;
+	padding: 15px;
+	padding-top: 10px;
 }
 
 .rad{
-	background-color: red;
 	width: 100%;
 }
 

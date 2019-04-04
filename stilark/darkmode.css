@@ -4,5 +4,21 @@ body{
 }
 
 a{
-	color: grey;
+	color: blue;
+}
+
+.innpakning, .preview{
+	background-color: navy;
+}
+
+td, .kolonne, .kommentarer{
+	background-color: black	;
+}
+
+.varenavn, .beskrivelse, .pris, .rating, th, .kommentarinfo{
+	background-color: #222222;
+}
+
+.kommentartekst{
+	background-color: #555555;
 }
