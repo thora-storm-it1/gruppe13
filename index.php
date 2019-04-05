@@ -47,7 +47,7 @@
 	<div class="preview">
 		<div class="overskrift"><h2> You might also like </h2></div>
 		<?php
-			$sql = "SELECT * FROM vare ORDER BY RAND() LIMIT 3";
+			$sql = "SELECT * FROM vare WHERE vare_id NOT IN ('2','3','8') ORDER BY RAND() LIMIT 3";
 			$resultat = $kobling->query($sql);
 
 			while($rad = $resultat->fetch_assoc()){		
