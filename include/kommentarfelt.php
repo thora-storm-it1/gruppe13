@@ -3,105 +3,106 @@
 </head>
 
 <body>
-	<div class="kolonne">
-		<h3> Leave a comment </h3>
+	<div class="kommentarfelt">
+		<div class="kolonne">
+			<h3> Leave a comment </h3>
 
-			<form method="POST">
+				<form method="POST">
 
-				<table class="kommenter">
-					<tr>
-						<td>Name</td>
-						<td><input type="text" name="brukernavn" class="brukernavn"></td>
-					</tr>
-					<tr>
-						<td>Comment</td>
-						<td><textarea rows="5" cols="80" name="kommentartekst"></textarea></td>
-					</tr>
-				</table>
-				<div class="kommentarknapp">
-					<input type="submit" name="leggtil" value="Comment">
-				</div>
-	</div>
-
-
-	<?php 			
-
-		if(isset($_POST["kommentartekst"])){
-			$kobling->set_charset("utf8");
-			$brukernavn = $_POST["brukernavn"];
-			$kommentartekst = $_POST["kommentartekst"];
-
-			if($brukernavn == ""){
-				$brukernavn = "Anonym";
-			}
-
-			if($kommentartekst != ""){
-			
-				$sql_1 = "INSERT INTO bruker (brukernavn) VALUES ('$brukernavn')";
-				$sql_2 = "SELECT bruker_id FROM bruker WHERE bruker.brukernavn='$brukernavn'";
-
-				$kobling->query($sql_1);
-
-				$resultat2 = $kobling->query($sql_2);
-
-			
-			
-
-			$rad1 = $resultat2->fetch_assoc();
-
-			$bruker_id = $rad1["bruker_id"];
-
-			$sql_3 = "INSERT INTO kommentar (kommentartekst, kommentar.vare_id, kommentar.bruker_id) VALUES ('$kommentartekst', '$vare_id', '$bruker_id')";
-
-			
-
-			if($kobling->query($sql_3)) {
-			header("Refresh:0");
-			}
-
-			}
+					<table class="kommenter">
+						<tr>
+							<td>Name</td>
+							<td><input type="text" name="brukernavn" class="brukernavn"></td>
+						</tr>
+						<tr>
+							<td>Comment</td>
+							<td><textarea rows="5" cols="80" name="kommentartekst"></textarea></td>
+						</tr>
+					</table>
+					<div class="kommentarknapp">
+						<input type="submit" name="leggtil" value="Comment">
+					</div>
+		</div>
 
 
+		<?php 			
 
-		}		
-			
-	?>
-	
+			if(isset($_POST["kommentartekst"])){
+				$kobling->set_charset("utf8");
+				$brukernavn = $_POST["brukernavn"];
+				$kommentartekst = $_POST["kommentartekst"];
 
-	</form>
+				if($brukernavn == ""){
+					$brukernavn = "Anonym";
+				}
 
-	<div class="kommentarer">
-		<h2> Comments </h2>
+				if($kommentartekst != ""){
+				
+					$sql_1 = "INSERT INTO bruker (brukernavn) VALUES ('$brukernavn')";
+					$sql_2 = "SELECT bruker_id FROM bruker WHERE bruker.brukernavn='$brukernavn'";
 
-		<?php
+					$kobling->query($sql_1);
+
+					$resultat2 = $kobling->query($sql_2);
+
+				
+				
+
+				$rad1 = $resultat2->fetch_assoc();
+
+				$bruker_id = $rad1["bruker_id"];
+
+				$sql_3 = "INSERT INTO kommentar (kommentartekst, kommentar.vare_id, kommentar.bruker_id) VALUES ('$kommentartekst', '$vare_id', '$bruker_id')";
+
+				
+
+				if($kobling->query($sql_3)) {
+				header("Refresh:0");
+				}
+
+				}
 
 
-			$sql = "SELECT * FROM kommentar JOIN bruker ON bruker.bruker_id=kommentar.bruker_id JOIN vare ON vare.vare_id=kommentar.vare_id WHERE kommentar.vare_id=$vare_id";
 
-			$resultat1 = $kobling->query($sql);
-
-
-			while($rad = $resultat1->fetch_assoc()){
-
-				$brukernavn = $rad["brukernavn"];
-				$kommentartekst = $rad["kommentartekst"];
-				$tid1 = date_create($rad["tid"]);
-				$dato = date_format($tid1, 'd.m.y');
-				$tid = date_format($tid1, 'H:i');
-
-				echo "
-						<div class='kommentar'>
-							<div class='kommentarinfo'>
-								<div> $brukernavn </div>
-								<div> Posted $dato at $tid </div> 
-							</div> 
-							<div class='kommentartekst'> $kommentartekst </div>
-						</div><br>";
-			}
-
+			}		
+				
 		?>
-	</div>
+		
 
+		</form>
+
+		<div class="kommentarer">
+			<h2> Comments </h2>
+
+			<?php
+
+
+				$sql = "SELECT * FROM kommentar JOIN bruker ON bruker.bruker_id=kommentar.bruker_id JOIN vare ON vare.vare_id=kommentar.vare_id WHERE kommentar.vare_id=$vare_id";
+
+				$resultat1 = $kobling->query($sql);
+
+
+				while($rad = $resultat1->fetch_assoc()){
+
+					$brukernavn = $rad["brukernavn"];
+					$kommentartekst = $rad["kommentartekst"];
+					$tid1 = date_create($rad["tid"]);
+					$dato = date_format($tid1, 'd.m.y');
+					$tid = date_format($tid1, 'H:i');
+
+					echo "
+							<div class='kommentar'>
+								<div class='kommentarinfo'>
+									<div> $brukernavn </div>
+									<div> Posted $dato at $tid </div> 
+								</div> 
+								<div class='kommentartekst'> $kommentartekst </div>
+							</div><br>";
+				}
+
+			?>
+		</div>
+	</div>
 
 
 </body>

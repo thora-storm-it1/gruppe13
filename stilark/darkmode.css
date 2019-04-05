@@ -11,8 +11,13 @@ a{
 	background-color: navy;
 }
 
-td, .kolonne, .kommentarer{
+td, .kolonne, .kommentarer, .kommentarfelt{
 	background-color: black	;
+}
+
+.kommentarfelt{
+	display: flex;
+	flex-grow: 1;
 }
 
 .varenavn, .beskrivelse, .pris, .rating, th, .kommentarinfo{

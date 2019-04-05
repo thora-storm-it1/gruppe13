@@ -26,11 +26,22 @@
 
 	<h3> <i> Ammu-Nation. Your go-to site for all things self defense, -and offense. <i> </h3>
 
+		
+
 	<div class="preview">
 		<div class="overskrift"> <h2> Our top sellers </h2> </div>
-			<a href="vare.php?vare_id=2&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
-			<a href="vare.php?vare_id=3&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
-			<a href="vare.php?vare_id=8&darkmode=$darkmode"><div class="vare"><img src=""></div></a>
+		<?php
+			$sql0 = "SELECT bildeurl FROM vare WHERE vare_id IN ('2','3','8')";
+			$resultat0 = $kobling->query($sql0);
+				while($rad = $resultat0->fetch_assoc()){
+					$bildeurl = $rad["bildeurl"];
+				
+				echo "
+				<a href='vare.php?vare_id=2&darkmode=$darkmode'><div class='vare'><img src='$bildeurl'></div></a>
+				";
+			}
+		?>
+			
 	</div>
 
 	<div class="preview">

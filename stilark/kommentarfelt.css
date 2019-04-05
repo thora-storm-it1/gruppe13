@@ -4,6 +4,13 @@
 		flex-flow:column wrap;
 		width:100%;
 	}
+
+	.kommentarfelt{
+		background-color: white;
+		display: flex;
+		flex-grow: 1;
+	}
+
 	.kommentarinfo {
 		background-color:grey;
 		padding: 5px;
