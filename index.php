@@ -31,13 +31,14 @@
 	<div class="preview">
 		<div class="overskrift"> <h2> Our top sellers </h2> </div>
 		<?php
-			$sql0 = "SELECT bildeurl FROM vare WHERE vare_id IN ('2','3','4')";
+			$sql0 = "SELECT * FROM vare WHERE vare_id IN ('2','3','4')";
 			$resultat0 = $kobling->query($sql0);
 				while($rad = $resultat0->fetch_assoc()){
 					$bildeurl = $rad["bildeurl"];
+					$vare_id = $rad["vare_id"];
 				
 				echo "
-				<a href='vare.php?vare_id=2&darkmode=$darkmode'><div class='vare'><img src='$bildeurl'></div></a>
+				<a href='vare.php?vare_id=$vare_id&darkmode=$darkmode'><div class='vare'><img src='$bildeurl'></div></a>
 				";
 			}
 		?>
