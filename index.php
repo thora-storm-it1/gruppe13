@@ -24,14 +24,14 @@
 
 <div class="innhold">
 
-	<h3> <i> Ammu-Nation. Your go-to site for all things self defense, -and offense. <i> </h3>
+	<h2> <i> Ammu-Nation. Your go-to site for all things self defense, -and offense. </i> </h2>
 
 		
 
 	<div class="preview">
 		<div class="overskrift"> <h2> Our top sellers </h2> </div>
 		<?php
-			$sql0 = "SELECT bildeurl FROM vare WHERE vare_id IN ('2','3','8')";
+			$sql0 = "SELECT bildeurl FROM vare WHERE vare_id IN ('2','3','4')";
 			$resultat0 = $kobling->query($sql0);
 				while($rad = $resultat0->fetch_assoc()){
 					$bildeurl = $rad["bildeurl"];
@@ -47,7 +47,7 @@
 	<div class="preview">
 		<div class="overskrift"><h2> You might also like </h2></div>
 		<?php
-			$sql = "SELECT * FROM vare WHERE vare_id NOT IN ('2','3','8') ORDER BY RAND() LIMIT 3";
+			$sql = "SELECT * FROM vare WHERE vare_id NOT IN ('2','3','4') ORDER BY RAND() LIMIT 3";
 			$resultat = $kobling->query($sql);
 
 			while($rad = $resultat->fetch_assoc()){		
